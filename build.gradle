@@ -18,17 +18,7 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter'
     implementation 'org.springframework.boot:spring-boot-starter-data-redis'
 
-    implementation 'it.ozimov:embedded-redis:0.7.3'
-
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
-}
-
-configurations {
-    all {
-        exclude group: 'org.springframework.boot', module: 'spring-boot-starter-logging'
-        exclude group: 'ch.qos.logback', module: 'logback-classic'
-        exclude group: 'org.apache.logging.log4j', module: 'log4j-to-slf4j'
-    }
 }
 
 tasks.named('test') {
